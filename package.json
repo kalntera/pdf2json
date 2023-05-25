@@ -39,8 +39,8 @@
     "parse-r": "node --trace-deprecation --trace-warnings pdf2json.js -f ./test/pdf/fd/form/F1040.pdf -o ./test/target/fd/form -t -c -m -r",
     "parse-fd": "node --trace-deprecation --trace-warnings pdf2json.js -f ./test/pdf/fd/form/ -o ./test/target/fd/form -t -c -m -r",
     "parse-tb": "node --trace-deprecation --trace-warnings pdf2json.js -f ./test/pdf/misc/i242_testingWithTable.pdf -o ./test/target/misc",
-	"parse-tc": "node --trace-deprecation --trace-warnings pdf2json.js -f ./test/pdf/misc/i293_pdfpac.pdf -o ./test/target/misc",
-	"parse-rectFix": "node --trace-deprecation --trace-warnings pdf2json.js -f ./test/pdf/misc/pr298_rect_fix_from_upstream.pdf -o ./test/target/misc",
+    "parse-tc": "node --trace-deprecation --trace-warnings pdf2json.js -f ./test/pdf/misc/i293_pdfpac.pdf -o ./test/target/misc",
+    "parse-rectFix": "node --trace-deprecation --trace-warnings pdf2json.js -f ./test/pdf/misc/pr298_rect_fix_from_upstream.pdf -o ./test/target/misc",
     "parse-e": "node --trace-deprecation --trace-warnings pdf2json.js -f ./test/pdf/misc/i43_encrypted.pdf -o ./test/target/misc",
     "parse-e2": "node --trace-deprecation --trace-warnings pdf2json.js -f ./test/pdf/misc/i243_problem_file_anon.pdf -o ./test/target/misc",
     "parse-e3": "node --trace-deprecation --trace-warnings pdf2json.js -f ./test/pdf/misc/i200_test.pdf -o ./test/target/misc"
@@ -54,7 +54,8 @@
     "pdf2json": "./bin/pdf2json.js"
   },
   "dependencies": {
-    "@xmldom/xmldom": "^0.8.6"
+    "@xmldom/xmldom": "^0.8.6",
+    "pdf2json": "^3.0.4"
   },
   "devDependencies": {
     "@types/node": "^18.7.18"
@@ -74,5 +75,8 @@
     "url": "http://github.com/modesty/pdf2json/issues"
   },
   "license": "Apache-2.0",
-  "readme": "https://github.com/modesty/pdf2json/blob/master/readme.md"
+  "readme": "https://github.com/modesty/pdf2json/blob/master/readme.md",
+  "bundleDependencies": [
+    "@xmldom/xmldom"
+  ]
 }
